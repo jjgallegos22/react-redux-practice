@@ -4,7 +4,7 @@ import rotateAction from 'actions/rotateAction';
 import logo from './logo.svg';
 import './App.css';
 
- class App extends React.Component {
+ class Test extends React.Component {
   render() {
     console.log(this.props)
     return (
@@ -19,7 +19,7 @@ import './App.css';
           alt="logo"
         />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          THIS A TEST PAGE!
         </p>
         <button onClick={() => { this.props.rotateAction(!this.props.rotating) }}>
             Click me
@@ -45,4 +45,4 @@ const mapDispatchToProps = dispatch => ({
   rotateAction: (payload) => dispatch(rotateAction(payload))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(Test);

@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route } from 'react-router-dom'
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
+import Test from './Test';
 import * as serviceWorker from './serviceWorker';
 import configureStore from "store";
+import history from './history';
 
 ReactDOM.render(
     <Provider store={configureStore()}>
-        <App />
+        <Router history={history}>
+            <Route exact path="/" component={App} />
+            <Route path="/test" component={Test} />
+        </Router>
     </Provider>,
     document.getElementById('root')
 );
